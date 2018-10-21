@@ -28,6 +28,10 @@ public class Main {
         for (User age: user){
             System.out.println("age: " + age.getAge());
         }
+
+        for(int i = 0; i < user.size(); i++){
+            System.out.println("imie: " + user.get(i).getName());
+        }
     }
 
 }
