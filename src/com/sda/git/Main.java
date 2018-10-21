@@ -7,34 +7,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<String> lista = new ArrayList<>();
+        User user1 = new User("Wiktor", "Syganiec", 37);
+        User user2 = new User("Jacek", "Placek", 28);
+        User user3 = new User("Agata", "Wymiata", 40);
 
-        lista.add("Jan");
-        lista.add("Maciej");
-        lista.add("Tadeusz");
+        List<User> user = new ArrayList<>();
 
-        System.out.println("Rozmiar: " + lista.size());
+        user.add(user1);
+        user.add(user2);
+        user.add(user3);
 
-        lista.add("Mateusz");
-        lista.add("Karol");
-
-        System.out.println("Rozmiar: " + lista.size());
-
-        for (String imie: lista){
-            System.out.println("Imie: " + imie);
+        for (User name: user){
+            System.out.println("imie: " + name.getName());
         }
 
-        lista.remove("Jan");
-        lista.remove(0);
-
-        String imie = lista.get(2);
-        System.out.println("Element o indeksie 2: " + imie);
-
-        for (int i = 0; i < lista.size(); i++){
-            System.out.println(lista.get(i));
+        for (User lastname: user){
+            System.out.println("lastname: " + lastname.getLastname());
         }
 
-        lista.clear();
+        for (User age: user){
+            System.out.println("age: " + age.getAge());
+        }
     }
 
 }
